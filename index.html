@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <h1 class="title">Welcome to katik</h1>
+        <p class="subtitle">Sebuah website untuk menghitung luas dan keliling dari segitiga dan jajar genjang</p>
+        <nav>
+            <div class="menu">
+                <a onclick="showTriangle()" href="#" class="menu-triangle" id="form-triangle">Segitiga</a>
+                <a onclick="showParallelogram()" href="#" class="menu-parallelogram" id="form-parallelogram">Jajar
+                    Genjang</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Main -->
+    <Main id="calculate" class="calculate">
+        <!-- Segitiga -->
+        <section id="calculate-triangle" class="calculate-triangle" hidden>
+            <!-- card segitiga -->
+            <div class="card">
+                <!-- Luas Segitiga -->
+                <h2>Luas Segitiga</h2>
+                <div>
+                    <img src="/assets/triangle.jpg" alt="triangle">
+                </div>
+                <div>
+                    <p>Rumus Luas Segitiga yaitu:</p>
+                    <H4>L=1/2 x a x t</H4>
+                </div>
+                <div>
+                    <p>Di mana: <br>L=Luas <br>a=panjang alas <br>t=Tinggi</p>
+                </div>
+                <hr>
+                <div>
+                    <H3>Hitung Luas Segitiga</H3>
+                </div>
+                <!-- form hitung luas segitiga -->
+                <form action="" class="form-triangle" id="form-triangle">
+                    <label for="alas-segitiga">(a) Alas:</label><br>
+                    <input type="number" id="alas-segitiga" name="alas-segitiga" required><br>
+                    <label for="tinggi-segitiga">(t) Tinggi:</label><br>
+                    <input type="number" id="tinggi-segitiga" name="tinggi-segitiga" required><br><br>
+                    <div>
+                        <!-- hasil hitung luas segitiga -->
+                        <p name="alas-segitiga" id="luasSegitiga"></p>
+                    </div>
+                    <div class="button-group">
+                        <input type="button" value="Hitung" onclick="hitungLuasSegitiga()" class="button-hitung"><br>
+                        <input type="reset" onclick="resetLuasSegitiga()" class="button-reset">
+                    </div>
+                </form><br>
+            </div>
+
+            <hr>
+            <hr>
+            <!-- card segitiga -->
+            <div class="card">
+                <!-- keliling segitiga -->
+                <h2>Keliling Segitiga</h2>
+                <div>
+                    <img src="/assets/triangle.jpg" alt="triangle">
+                </div>
+                <div>
+                    <p>Rumus Keliling Segitiga yaitu:</p>
+                    <H4>K= S1+S2+S3</H4>
+                </div>
+                <div>
+                    <p>Di mana: <br>S1=sisi 1 <br>S2=sisi 2 <br>S3=sisi 3</p>
+                </div>
+                <hr>
+                <div>
+                    <H3>Hitung Keliling Segitiga</H3>
+                </div>
+                <!-- form hitung Keliling segitiga -->
+                <form action="" class="form-triangle" id="form-triangle">
+                    <label for="sisi1-segitiga">(S1) sisi 1:</label><br>
+                    <input type="number" id="sisi1-segitiga" name="sisi1-segitiga" required><br>
+                    <label for="sisi2-segitiga">(S2) sisi 2:</label><br>
+                    <input type="number" id="sisi2-segitiga" name="sisi2-segitiga" required><br>
+                    <label for="sisi3-segitiga">(S3) sisi 3:</label><br>
+                    <input type="number" id="sisi3-segitiga" name="sisi3-segitiga" required><br><br>
+                    <div>
+                        <!-- hasil hitung keliling segitiga -->
+                        <p name="alas-segitiga" id="kelilingSegitiga"></p>
+                    </div>
+                    <div class="button-group">
+                        <input type="button" value="Hitung" onclick="hitungKelilingSegitiga()"
+                            class="button-hitung"><br>
+                        <input type="reset" onclick="resetKelilingSegitiga()" class="button-reset">
+                    </div>
+                </form><br>
+            </div>
+        </section>
+
+        <!-- Jajar Genjang -->
+        <section id="calculate-parallelogram" class="calculate-parallelogram" hidden>
+            <!-- card Jajar Genjang -->
+            <div class="card">
+                <!-- Luas Jajar Genjang -->
+                <h2>Luas Jajar Genjang</h2>
+                <div>
+                    <img src="/assets/download (2).png" alt="parallelogram">
+                </div>
+                <div>
+                    <p>Rumus luas Jajar Genjang yaitu:</p>
+                    <H4>L= a x t</H4>
+                </div>
+                <div>
+                    <p>Di mana: <br>L=Luas <br>a=panjang alas <br>t=Tinggi</p>
+                </div>
+                <hr>
+                <div>
+                    <H3>Hitung Luas Jajar Genjang</H3>
+                </div>
+                <!-- form hitung luas jajar genjang -->
+                <form action="" class="form-parallelogram" id="form-parallelogram">
+                    <label for="alas-jajargenjang">(a) Alas:</label><br>
+                    <input type="number" id="alas-jajargenjang" name="alas-jajargenjang" required><br>
+                    <label for="tinggi-jajargenjang">(t) Tinggi:</label><br>
+                    <input type="number" id="tinggi-jajargenjang" name="tinggi-jajargenjang" required><br><br>
+                    <div>
+                        <!-- hasil hitung luas jajar genjang -->
+                        <p name="alas-jajargenjang" id="luasJajarGenjang"></p>
+                    </div>
+                    <div class="button-group">
+                        <input type="button" value="Hitung" onclick="hitungLuasJajarGenjang()"
+                            class="button-hitung"><br>
+                        <input type="reset" onclick="resetLuasjajargenjang()" class="button-reset">
+                    </div>
+                </form><br>
+            </div>
+            <hr>
+            <hr>
+            <!-- card Jajar Genjang -->
+            <div class="card">
+                <!-- Keliling jajar genjang -->
+                <h2>Keliling Jajar Genjang</h2>
+                <div>
+                    <img src="/assets/download (2).png" alt="parallelogram">
+                </div>
+                <div>
+                    <p>Rumus Keliling Jajar Genjang yaitu:</p>
+                    <H4>K= 2 x (a+b)</H4>
+                </div>
+                <div>
+                    <p>Di mana: <br>L=Luas <br>a=panjang alas <br>b=sisi miring</p>
+                </div>
+                <hr>
+                <div>
+                    <H3>Hitung Keliling Jajar Genjang</H3>
+                </div>
+                <!-- form hitung Keliling jajar genjang -->
+                <form action="" class="form-parallelogram" id="form-parallelogram">
+                    <label for="sisi1-jajargenjang">(a) Alas:</label><br>
+                    <input type="number" id="sisi1-jajargenjang" name="sisi1-jajargenjang" required><br>
+                    <label for="sisi2-jajargenjang">(b) sisi miring:</label><br>
+                    <input type="number" id="sisi2-jajargenjang" name="sisi2-jajargenjang" required><br><br>
+                    <div>
+                        <!-- hasil hitung keliling jajar genjang -->
+                        <p name="sisi1-jajargenjang" id="kelilingJajarGenjang"></p>
+                    </div>
+                    <div class="button-group">
+                        <input type="button" value="Hitung" onclick="hitungKelilingJajarGenjang()"
+                            class="button-hitung"><br>
+                        <input type="reset" onclick="resetKelilingJajargenjang()" class="button-reset">
+                    </div>
+                </form><br>
+            </div>
+        </section>
+    </Main>
+    <!-- footer -->
+    <footer>Copyright © 2023 Yogi Dwiki darmawan. All Rights Reserved</footer>
+</body>
+<script src="/javascipt/index.js"></script>
+
+</html>
